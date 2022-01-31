@@ -14,9 +14,18 @@ export default {
 <style lang="scss" scoped>
 
 .loader-container{
-    background-color: yellowgreen;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #1E2D3B;
 
-        .lds-heart {
+}
+
+.lds-heart {
             display: inline-block;
             position: relative;
             width: 80px;
@@ -70,8 +79,6 @@ export default {
                 transform: scale(0.9);
             }
         }
-
-}
 
 
 </style>

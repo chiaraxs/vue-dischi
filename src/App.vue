@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <header-box />
-    <loader />
-    <main-content :discs = "discs" />
+    
+    <main-content v-if="load === true" :discs = "discs" />
+    <loader v-else/>
     
   
   </div>
@@ -23,12 +24,14 @@ export default {
   },
   data(){
     return {
-      discs: []
+      discs: [],
+      load: false,
     }
   },
   mounted(){
     axios.get('https://flynn.boolean.careers/exercises/api/array/music').then((response) => {
-      this.discs = response.data.response
+      this.load = true;
+      this.discs = response.data.response;
     })
   },
 }
