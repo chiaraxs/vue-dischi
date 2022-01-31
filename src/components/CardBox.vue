@@ -1,11 +1,12 @@
 <template>
     <div class="container-card">
         
-        <div class="dischi">
+        <div class="discs ">
             <img :src="disc.poster">
-            <h4>{{disc.title}}</h4>
-            <h6>{{disc.author}}</h6>
-            <h6>{{disc.year}}</h6>
+            <h5>{{disc.title}}</h5>
+            <p>{{disc.author}}
+            <br>
+            {{disc.year}}</p>
         </div>
     
     </div>
@@ -26,5 +27,29 @@ export default {
 
 <style lang="scss" scoped>
 
+.discs{
+    
+    color: white;
+    text-align: center;
+
+    img{
+        width: 200px;
+        padding: 10px;
+    
+
+    }
+
+    h5{
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    p{
+        color: grey;
+        margin-top: 20px;
+    }
+}
 
 </style>

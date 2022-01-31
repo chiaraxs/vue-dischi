@@ -21,7 +21,7 @@ export default {
 
 header{
 
-    background-color: #282828;
+    background-color: #2E3A46;
     
         .logo-img{
         width: 80px;
