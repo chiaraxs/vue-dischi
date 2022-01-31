@@ -1,11 +1,17 @@
 <template>
-    <div></div>
+    <div class="main">
+        <card-box/>
+    </div>
 </template>
 
 <script>
+import CardBox from './CardBox.vue'
 
 
 export default {
+    components: {
+    CardBox,
+    },
  
     
 }
@@ -13,6 +19,11 @@ export default {
 
 
 <style lang="scss" scoped>
+
+main{
+    display: flex;
+    background-color: #1E2D3B;
+}
 
 
 </style>

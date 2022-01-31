@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="container-fluid">
         <div class="logo-img">
             <img src="../assets/spotify-logo.png" alt="">
         </div>
@@ -20,20 +20,17 @@ export default {
 <style lang="scss" scoped>
 
 header{
-    height: 80px;
+
     background-color: #282828;
     
-    
-
-
-    .logo-img{
-    width: 50px;
-            
-        img{
-            width: 100%;
-            padding: 15px;
+        .logo-img{
+        width: 80px;
+                
+            img{
+                width: 100%;
+                padding: 15px;
+            }
         }
-    }
 }
 
 </style>
