@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <header-box />
+    <loader />
     <main-content :discs = "discs" />
+    
   
   </div>
 </template>
@@ -9,6 +11,7 @@
 <script>
 import HeaderBox from './components/HeaderBox.vue';
 import MainContent from './components/MainContent.vue';
+import Loader from './components/Loader.vue'
 import axios from 'axios';
 
 export default {
@@ -16,6 +19,7 @@ export default {
   components: {
     MainContent,
     HeaderBox,
+    Loader,
   },
   data(){
     return {

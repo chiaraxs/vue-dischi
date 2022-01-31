@@ -1,5 +1,6 @@
 <template>
     <div class="main d-flex flex-wrap pt-5">
+        <loader-box/>
         <card-box v-for="(disc, index) in discs"
         :key="index"
         :disc="disc"
