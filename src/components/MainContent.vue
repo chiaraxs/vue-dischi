@@ -1,6 +1,9 @@
 <template>
     <div class="main">
-        <card-box/>
+        <card-box v-for="(disc, index) in discs"
+        :key="index"
+        :disc="disc"
+        />
     </div>
 </template>
 
@@ -12,6 +15,9 @@ export default {
     components: {
     CardBox,
     },
+    props:{
+        discs: Array,
+    }
  
     
 }
