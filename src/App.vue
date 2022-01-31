@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <header-box />
-    
     <main-content v-if="load === true" :discs = "discs" />
     <loader v-else/>
     
