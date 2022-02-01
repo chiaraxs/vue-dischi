@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <header-box />
+    
+    <header-box /> 
+    <select-bar /> 
+    
     <main-content v-if="load === true" :discs = "discs" />
     <loader v-else/>
     
@@ -11,7 +14,8 @@
 <script>
 import HeaderBox from './components/HeaderBox.vue';
 import MainContent from './components/MainContent.vue';
-import Loader from './components/Loader.vue'
+import Loader from './components/Loader.vue';
+import SelectBar from './components/SelectBar.vue';
 import axios from 'axios';
 
 export default {
@@ -20,6 +24,7 @@ export default {
     MainContent,
     HeaderBox,
     Loader,
+    SelectBar,
   },
   data(){
     return {
