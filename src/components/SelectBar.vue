@@ -1,14 +1,13 @@
 <template>
     
     <div class="select-box d-flex justify-content-center pt-3">
-        <select v-model="selected" class="form-select w-25" aria-label="Default select example">
+        <select v-model="selected" @change="$emit('selectedGenre', selected)" class="form-select w-25" aria-label="Default select example">
             
-           <option disabled value="">Please select one</option>
-           <!-- <option v-for="(genre, index) in genres" :key="index" :value="genre.value">{{disc.genre}}</option>
-         -->
+           <option disabled value="">Select genre</option>
+           <option v-for="(genre, index) in values" :key="index" :value="genre">{{genre}}</option>
+           <!-- <option v-for="(genre, index) in genres" :key="index" :value="genre.value">{{discs.genre}}</option> -->
+         
         </select>
-
-        <span>Selected: {{ selected }}</span>
 
     </div>
        
@@ -21,12 +20,16 @@
 
 
 export default {
+    props: {
+        values: Array
+    },
     data(){
         return{
             selected: ''
         }
         
     }
+    
 }
 </script>
 
