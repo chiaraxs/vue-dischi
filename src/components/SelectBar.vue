@@ -4,8 +4,8 @@
         <select v-model="selected" class="form-select w-25" aria-label="Default select example">
             
            <option disabled value="">Please select one</option>
-           <option v-for="(genre, index) in genres" :key="index" :value="genre.value">{{disc.genre}}</option>
-        
+           <!-- <option v-for="(genre, index) in genres" :key="index" :value="genre.value">{{disc.genre}}</option>
+         -->
         </select>
 
         <span>Selected: {{ selected }}</span>

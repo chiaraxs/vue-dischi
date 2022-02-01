@@ -2,7 +2,7 @@
   <div id="app">
     
     <header-box /> 
-    <select-bar /> 
+    <select-bar :value="['pop', 'rock']"/> 
     
     <main-content v-if="load === true" :discs = "discs" />
     <loader v-else/>
