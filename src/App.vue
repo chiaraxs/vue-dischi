@@ -2,7 +2,7 @@
   <div id="app">
     
     <header-box /> 
-    <select-bar :values="['Pop', 'Rock', 'Jazz', 'Metal']" @selectedGenre="filterResults"/> 
+    <select-bar :values="['All','Pop', 'Rock', 'Jazz', 'Metal']" @selectedGenre="filterResults"/> 
     
     <main-content v-if="load === true" :discs = "filteredListGenre" />
     <loader v-else/>
@@ -43,7 +43,7 @@ export default {
   methods: {
     filterResults(keyword){
       this.filteredListGenre = this.discs.filter((disc) => {
-        return disc.genre.toLowerCase().includes(keyword)
+        return disc.genre.toLowerCase() === keyword.toLowerCase() || keyword.toLowerCase() === 'all';
       });
     }
   }
