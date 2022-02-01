@@ -5,9 +5,10 @@
             
            <option disabled value="">Select genre</option>
            <option v-for="(genre, index) in values" :key="index" :value="genre">{{genre}}</option>
-           <!-- <option v-for="(genre, index) in genres" :key="index" :value="genre.value">{{discs.genre}}</option> -->
-         
+           
         </select>
+
+        
 
     </div>
        
